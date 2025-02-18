@@ -1,11 +1,11 @@
-package org.example.nlplogin;
+package org.example.uitesting.login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LoginAutomation {
+public class Login {
     public static void main(String[] args) {
         // Khởi tạo WebDriver
         WebDriver driver = new ChromeDriver();
@@ -20,19 +20,22 @@ public class LoginAutomation {
             String passwordInput = "123456";
 
             // Tìm và nhập Username
-            By usernameLocator = NLPToLocator.createLocator("username", "placeholder", "Username");
+            By usernameLocator = Nlp.createLocator("username", "placeholder", "Username");
             WebElement usernameField = driver.findElement(usernameLocator);
             usernameField.sendKeys(usernameInput);
 
             // Tìm và nhập Password
-            By passwordLocator = NLPToLocator.createLocator("password", "placeholder", "Password");
+            By passwordLocator = Nlp.createLocator("password", "placeholder", "Password");
             WebElement passwordField = driver.findElement(passwordLocator);
             passwordField.sendKeys(passwordInput);
 
             // Tìm và nhấn nút Login
-            By loginButtonLocator = NLPToLocator.createLocator("nút login", "text", "");
+            By loginButtonLocator = Nlp.createLocator("nút login", "button", "click");
             WebElement loginButton = driver.findElement(loginButtonLocator);
             loginButton.click();
+
+            System.out.printf("loginXpath:" + loginButton );
+            System.out.printf("loginXpath:" + loginButtonLocator );
 
             System.out.println("Đăng nhập thành công!");
 

@@ -1,8 +1,8 @@
-package org.example.nlplogin;
+package org.example.uitesting.login;
 
 import org.openqa.selenium.By;
 
-public class NLPToLocator {
+public class Nlp {
     // Phương thức tạo XPath từ mô tả ngôn ngữ tự nhiên
     public static By createLocator(String element, String attribute, String value) {
         String xpath = "";
@@ -14,11 +14,11 @@ public class NLPToLocator {
                 break;
             case "password":
                 xpath = "//input[@placeholder='Password']";
-                break;
+                break;//*[@id="password"]
             case "nút login":
             case "login":
                 xpath = "//button[text()='Login']";
-                break;
+                break;//*[@id="login-button"]
             default:
                 xpath = "//*";
         }
