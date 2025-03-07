@@ -15,9 +15,10 @@ public class Nlp {
             case "password":
                 xpath = "//input[@placeholder='Password']";
                 break;//*[@id="password"]
-            case "nút login":
+//            case "nút login":
             case "login":
-                xpath = "//button[text()='Login']";
+                xpath = "//button[@login='Click']";
+//                xpath = "//*[@id=\"login-button\"]";
                 break;//*[@id="login-button"]
             default:
                 xpath = "//*";

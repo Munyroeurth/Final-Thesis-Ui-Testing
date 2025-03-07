@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         String descripion = "Fill username\nFill password\nClick login";
         String targetURL = "http://saucedemo.com";
