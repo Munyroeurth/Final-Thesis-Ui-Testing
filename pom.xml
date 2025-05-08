@@ -47,8 +47,5 @@
             <artifactId>stanford-corenlp</artifactId>
             <version>4.5.4</version>
         </dependency>
-
-
     </dependencies>
-
 </project>
